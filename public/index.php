@@ -1,5 +1,5 @@
 <?php
-
+echo '<h1>qwe</h1>';exit;
 /**
  * Laravel - A PHP Framework For Web Artisans
  *
