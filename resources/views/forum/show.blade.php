@@ -70,6 +70,7 @@
     </div>
     
     <script>
+
         var User = {id:0,name:'0',avatar:'0'};
         @if(Auth::check() && Auth::user()->id == $discussion->user_id)
             var User = {
@@ -78,7 +79,11 @@
             }
             
         @endif
+        window.onload=function(){
+            console.log('token='+document.querySelector('#token'));
+        }
         Vue.http.headers.common['X-CSRF-TOKEN'] = document.querySelector('#token').getAttribute('value');
+
         new Vue({
             el:'#post',
             data:{
@@ -100,7 +105,9 @@
                     var comment = this.newComment;
                     var post = this.newPost;
                     post.body = comment.body;
+
                     this.$http.post('/comment',post,function(){
+                        console.log(comment);
                         this.comments.push(comment);
                     });
                     this.newComment = {
