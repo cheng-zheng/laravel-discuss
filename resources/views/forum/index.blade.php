@@ -2,7 +2,7 @@
 @section('content')
     <div class="jumbotron">
         <div class="container">
-            <h2>欢迎来到Laravel App 社区
+            <h2>Welcome discuss
                 {{--@if(Auth::check())--}}
                 <a class="btn btn-primary btn-lg pull-right" href="/discussions/create" role="button">发布新帖</a>
                 {{--@endif--}}
@@ -49,13 +49,12 @@
                         </div>
                         <div class="media-left">
                             <a href="#">
-                                <img class="media-object img-circle" alt="64x64" src="{{$discussion->user->avatar}}" width="64px">
+                                <img class="media-object img-circle" alt="32x32" src="{{$discussion->user->avatar}}" width="32px">
                             </a>
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading"><a href="/discussions/{{$discussion->id}}">{{$discussion->title}}</a></h4>
-
-                            {{$discussion->user->name}}
+                            <span class="media-name">{{$discussion->user->name}}</span>
                         </div>
 
                     </div>

@@ -3,7 +3,7 @@
 
     git clone git@github.com:cheng-zheng/laravel-discuss.git
 
-## 如果没安装
+## 看看有没安装compser
 
 	composer -v		
 
@@ -18,6 +18,8 @@
 	composer install
 
 	composer install --ignore-platform-reqs		php7问题，忽略php版本
+
+## 要给文件权限
 
 	chmod -R 777 storage/logs
 

@@ -16,7 +16,7 @@
     <script src="/js/vue-resource.js"></script>
     <script src="{{url('js/highlight.min.js')}}"></script>
     {{--<meta id="token" name="token" value="{{csrf_token()}}">--}}
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" id="token" content="{{ csrf_token() }}">
 </head>
 <body>
 <nav class="navbar navbar-default">

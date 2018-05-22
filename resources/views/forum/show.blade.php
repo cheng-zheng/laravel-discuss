@@ -30,7 +30,7 @@
                     <div class="media">
                         <div class="media-left">
                             <a href="#">
-                                <img class="media-object img-circle" alt="64x64" src="{{$comment->user->avatar}}" width="64px">
+                                <img class="media-object img-circle" alt="24x24" src="{{$comment->user->avatar}}" width="24px">
                             </a>
                         </div>
                         <div class="media-body">
@@ -80,9 +80,9 @@
             
         @endif
         window.onload=function(){
-            console.log('token='+document.querySelector('#token'));
+            console.log(document.querySelector('#token').content);
         }
-        Vue.http.headers.common['X-CSRF-TOKEN'] = document.querySelector('#token').getAttribute('value');
+        Vue.http.headers.common['X-CSRF-TOKEN'] = document.querySelector('#token').content;
 
         new Vue({
             el:'#post',
