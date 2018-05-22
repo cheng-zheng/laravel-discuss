@@ -1,7 +1,10 @@
 /node_modules
 /public/hot
 /public/storage
+/bootstrap/cache
 /storage/*.key
+/storage/logs
+/storage/framework
 /vendor
 /.idea
 /.vagrant
