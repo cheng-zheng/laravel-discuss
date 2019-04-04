@@ -34,3 +34,7 @@
 	location / {
 		try_files $uri $uri/ /index.php$is_args$query_string;  
 	} 
+## 配置
+	cp .env.example .env
+## 生成密钥
+	php artisan key:generate
