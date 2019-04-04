@@ -16,8 +16,9 @@
 ## 安装扩展
 
 	composer install
-
+	#能中国镜像可能实效 rm -f composer.lock
 	composer install --ignore-platform-reqs		php7问题，忽略php版本
+
 
 ## 要给文件权限
 
